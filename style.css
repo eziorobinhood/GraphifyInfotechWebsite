@@ -8,12 +8,21 @@
     line-height: 5vh;
 }
 
+@keyframes scroll {
+    from{
+        transform: translateY(180px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+    
+}
+
 .home{
-    background-image: url(images/bg1.jpg);
-    background-attachment: fixed;
     height: 100vh;
     background-size: cover;
-    background-position: center;
+    background-image: url(images/homebg.png);
+    
 }
 
 .logocontent{
@@ -21,155 +30,126 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+
 }
 .navibar img{
-    width: 70px;
+    width: 200px;
     float: left;
+
 }
 
-.navibar h1{
-    float: left;
-}
 
 .navibar{
     position: fixed;
     z-index: 1;
     width: 100%;
-    height: 12vh;
+    height: 15vh;
     float: left;
+    background-color:azure;
+    box-shadow: 1px 5px 5px 0 hsla(0, 0%, 100%, 0.2);
     display: flex;
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur( 10px );
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
     justify-content: space-around;
     align-items: center;
 
 }
 
-.navibar h1{
-    color: #fff;
-    font-size: 2rem;
-    float: left;
-    padding: 20px;
-    font-weight: 700;
-    font-family: "Alegreya SC", serif;
-    font-style: italic;
 
-}
 
 .navibar ul{
     list-style: none;
-    float: right;
 }
 
 .navibar ul li{
     float: left;
     padding: 20px;
-    font-weight: 700;
-    font-family: "Alegreya SC", serif;
-    font-style: italic;
+    font-weight: 500;
 }
 
 .navibar ul li a{
     text-decoration: none;
-    color: #fff;
-    font-size: 1.2rem;
+    color: #000;
+    font-size: 1rem;
     padding: 10px;
     transition: all 0.3s ease;
 }
 
 .navibar ul li a:hover{
-    border-bottom: 2px solid #fff;
-    border-radius: 5px;
+    border-bottom: 2px solid #030a24;
+    border-radius: 1px;
 }
 
 
 .home-content{
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur( 4px );
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 50px;
+    width: 50%;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 60%;
+    transform: translate(0%, -50%);
     text-align: center;
     color: #fff;
 }
 
 .home-content h1{
-    font-size: 4rem;
+    font-size: 2.5rem;
     font-weight: 700;
-    font-family: "Alegreya SC", serif;
-    font-style: italic;
+    line-height: 4rem;
+    text-shadow: 2px 5px 5px #999;
 }
 
 .home-content h3{
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 700;
-    font-family: "Alegreya SC", serif;
-    font-style: italic;
 }
 
 .home-content p{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 500;
-    font-family: "Alegreya SC", serif;
-    font-style: italic;
+    text-align: justify;
     margin: 20px 0;
 }
 
 .home-content button{
-    padding: 10px;
-    font-family: "Alegreya SC", serif;
+    padding: 20px auto;
     margin: 10px;
-    background-color: green;
-    border: none;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 50px;
 }
 
 .home-content button a{
     text-decoration: none;
-    color: #fff;
-    font-size: 1.5rem;
-    background-color: green;
+    color: #000;
+    font-size: 1rem;
     font-weight: 700;
-    font-family: "Alegreya SC", serif;
-    font-style: italic;
 }
 
 .home-content button:hover{
-    background-color: green;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+    background-color: #888;
+    border-radius: 50px;
+    border:1px solid #555;
 }
 
+.home-content button:active{
+    background-color: #555;
+    border-radius: 50px;
+    border:1px solid #000;
+}
 
     
 .aboutus{
     padding: 20vh;
-    background-image: url(images/bg2.jpg);
+    background-color: #030a24;
     background-attachment: fixed;
-    display: flex;
-    height: 200vh;
+    height: 120vh;
     background-size: cover;
     background-position: center;
     float: left;
-    align-items: center;
-    flex-direction: column;
 }
 
 .aboutus h1{
     text-align: center;
-    font-size: 4rem;
+    font-size: 2rem;
     font-weight: 700;
-    font-family: "Alegreya SC", serif;
-    font-style: italic;
     margin-top: 20px;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -177,23 +157,25 @@
 
 .aboutus-content{
     margin: 20px;
+    animation: scroll 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+    float: left;
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba(104, 7, 104, 0.37);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
-    width: 90%;
-    left: 50%;
+    width: 50%;
     text-align: center;
     color: #fff;
 }
 
 .aboutus h3{
     text-align: center;
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: 700;
-    font-family: "Alegreya SC", serif;
     font-style: italic;
     margin-top: 20px;
     color: #fff;
@@ -204,7 +186,6 @@
     text-align: center;
     font-size: 1.5rem;
     font-weight: 400;
-    font-family: "Alegreya SC", serif;
     font-style: italic;
     margin-top: 20px;
     color: #fff;
@@ -215,14 +196,28 @@
     text-align: center;
     padding: 30px;
     text-align: justify;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 500;
-    font-family: "Alegreya SC", serif;
     font-style: italic;
     margin: 10px;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 
+}
+
+.carousal-image{
+    animation: scroll 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+    width: 40%;
+    height: 70vh;
+    float: left;
+}
+
+.carousal-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
 }
 
 .content-cards{
@@ -235,7 +230,10 @@
 }
 
 .about-card{
-    height: 40vh;
+    animation: scroll 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+    height: 30vh;
     text-align: justify;
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba(104, 7, 104, 0.37);
@@ -248,8 +246,61 @@
     padding: 20px;
 }
 
+.about-card img{
+    
+    width: 8%;
+    float: left;
+    border-radius: 10px;
+}
+.services{
+    background-color: #030a24;
+    width: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.services h1{
+    animation: scroll 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.services h3{
+    animation: scroll 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    font-style: italic;
+    margin-top: 20px;
+    color: #fff;
+    border-bottom: 2px solid #ffffff60;
+    padding-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.services p{
+    text-align: center;
+    padding: 30px;
+    text-align: justify;
+    font-size: 1rem;
+    font-weight: 500;
+    font-style: italic;
+    margin: 10px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 .contactus{
-    background-image: url(images/bg4.jpg);
+    background-color: #030a24;
     background-attachment: fixed;
     display: flex;
     height: 150vh;
@@ -260,18 +311,34 @@
     flex-direction: column;
 }
 
+.contactus-head{
+    animation: scroll 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+    width: 100%;
+    padding: 10vh;
+    background-color: #030a24;
+}
+
+
 .contactus h1{
-    text-align: center;
-    font-size: 4rem;
+    animation: scroll 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+    width: 100%;
+    float: left;
+    text-align: left;
+    font-size: 2rem;
     font-weight: 700;
-    font-family: "Alegreya SC", serif;
-    font-style: italic;
     margin-top: 20px;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .contactus-content{
+    animation: scroll 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
     margin: 20px;
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba(104, 7, 104, 0.37);
@@ -285,22 +352,39 @@
     color: #fff;
 }
 
-.contactus h3{
-    text-align: center;
-    font-size: 2rem;
+.contactus h2{
+    animation: scroll 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+    text-align: left;
+    font-size: 1.5rem;
     font-weight: 700;
-    font-family: "Alegreya SC", serif;
     font-style: italic;
-    margin-top: 20px;
+    margin-top: 40px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contactus h3{
+    animation: scroll 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 700;
+    font-style: italic;
+    margin-top: 30px;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .contactus h5{
+    animation: scroll 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
     text-align: center;
     font-size: 1.5rem;
     font-weight: 400;
-    font-family: "Alegreya SC", serif;
     font-style: italic;
     margin-top: 20px;
     color: #fff;
@@ -308,22 +392,96 @@
 }
 
 .contactus p{
+    animation: scroll 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
     text-align: center;
     padding: 30px;
     text-align: justify;
     font-size: 1.5rem;
     font-weight: 500;
-    font-family: "Alegreya SC", serif;
     font-style: italic;
     margin: 10px;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.getstarted{
+    width: 100%;
+    padding: 10vh;
+    background-color: #030a24;
+    display: flex;
+    float: left;
+    align-items: center;
+    flex-direction: column;
+}
+
+.getstarted h1{
+    animation: scroll 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.getstarted h3{
+    animation: scroll 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    font-style: italic;
+    margin-top: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.get-started-head{
+    animation: scroll 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+    width: 100%;
+    float: left;
+    text-align: left;
+    display: flex;
+    padding: 10vh;
+    background-image: url(images/contactus-bg.jpg);
+    background-blend-mode: overlay;
+    background-position: center;
+    background-size: contain;
+    background-color: #030a24;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    flex-direction: column;
+    align-items: center;
+}
+
+.get-started-head button{
+    animation: scroll 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 30%;
+    text-decoration: none;
+    border: none;
+    margin: 10px;
+    padding: 30px auto;
+    color: #000;
+    font-size: 1rem;
+    background-color: #fff;
+    font-weight: 700;
+    font-style: italic;
+}
 
 
 .contact-card{
-    height: 50vh;
+    animation: scroll 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+    height: 40vh;
     overflow: hidden;
     text-align: left;
     background: rgba(255, 255, 255, 0.25);
@@ -332,7 +490,7 @@
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
-    width: 20%;
+    width: 30%;
     margin: 20px;
     padding: 20px;
     transition-duration: .3s;
@@ -341,9 +499,10 @@
 
 .contact-card h3{
     text-align: center;
-    font-size: 2rem;
+    border-bottom: 2px solid #ffffff60;
+    padding-bottom: 10px;
+    font-size: 1.5rem;
     font-weight: 700;
-    font-family: "Alegreya SC", serif;
     font-style: italic;
     margin-top: 20px;
     color: #fff;
@@ -352,316 +511,17 @@
 
 .contact-card p{
     text-align: center;
-    font-size: 18px;
-    font-weight: 400;
-    font-family: "Alegreya SC", serif;
-    font-style: italic;
-    margin-top: 20px;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.contactus-content button{
-    text-decoration: none;
-    border: none;
-    margin: 10px;
-    color: #fff;
-    font-size: 1.5rem;
-    background-color: green;
-    font-weight: 700;
-    font-family: "Alegreya SC", serif;
-    font-style: italic;
-}
-
-.contactus-content button a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.5rem;
-    background-color: green;
-    font-weight: 700;
-    font-family: "Alegreya SC", serif;
-    font-style: italic;
-}
-
-.contactus-content button:hover{
-    background-color: green;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-.pricing{
-    width: 100%;
-    padding: 10vh;
-    background-image: url(images/bg5.jpg);
-    background-attachment: fixed;
-    display: flex;
-    height: 150vh;
-    background-size: cover;
-    background-position: center;
-    float: left;
-    align-items: center;
-    flex-direction: column;
-}
-
-.pricing h1{
-    text-align: center;
-    font-size: 4rem;
-    font-weight: 700;
-    font-family: "Alegreya SC", serif;
-    font-style: italic;
-    margin-top: 20px;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.pricing-content{
-    margin: 20px;
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px 0 rgba(39, 39, 39, 0.37);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur( 4px );
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    width: 50%;
-    left: 50%;
-    text-align: center;
-    color: #fff;
-}
-
-.pricing h3{
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 700;
-    font-family: "Alegreya SC", serif;
-    font-style: italic;
-    margin-top: 20px;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.pricing h5{
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 400;
-    font-family: "Alegreya SC", serif;
-    font-style: italic;
-    margin-top: 20px;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.pricing p{
-    text-align: center;
-    text-align: center;
     font-size: 1rem;
     font-weight: 400;
-    font-family: "Alegreya SC", serif;
     font-style: italic;
-    margin: 10px;
+    margin-top: 0px;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.pricing-card{
-    height: 60vh;
-    display: flex;
-    text-align: justify;
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px 0 rgba(43, 42, 43, 0.37);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur( 4px );
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    width: 20%;
-    margin: 20px;
-    padding: 20px;
-    flex-direction: column;
-}
-
-.pricing-card h1{
-    text-align: center;
-    padding: 10px;
-    border-bottom: 2px solid #ffffff60;
-    font-size: 2rem;
-    font-weight: 700;
-    font-family: "Poppins", sans-serif;
-    margin-top: 20px;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-
-.pricing-card h2{
-    text-align: center;
-    border-bottom: 2px solid #ffffff60;
-    font-size: 2rem;
-    padding: 10px;
-    font-weight: 700;
-    font-family: "Alegreya SC", serif;
-    margin-top: 20px;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.pricing-card button{
-    align-self: center;
-    padding: 10px;
-    margin: 10px;
-    color: #b6ae9f;
-    font-family: "Alegreya SC", serif;
-    background-color: #42454e;
-    border: none;
-}
-
-.pricing-card button a{
-    text-decoration: none;
-    color: #b6ae9f;
-    font-size: 1.5rem;
-    font-weight: 700;
-    font-family: "Alegreya SC", serif;
-    font-style: italic;
-}
-.pricing-card button:hover{
-    background-color: #0f0e0c;
-    color: #42454e;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-.contact-form{
-    width: 100%;
-    padding: 10vh;
-    background-image: url(images/bg6.jpg);
-    background-attachment: fixed;
-    display: flex;
-    height: 170vh;
-    background-size: cover;
-    background-position: center;
-    float: left;
-    align-items: center;
-    flex-direction: column;
-}
-
-.contact-form h1{
-    text-align: center;
-    font-size: 4rem;
-    font-weight: 700;
-    font-family: "Alegreya SC", serif;
-    font-style: italic;
-    margin-top: 20px;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.contact-form-content{
-    margin: 50px;
-    width: 50%;
-    left: 50%;
-    text-align: center;
-    color: #fff;
-}
-
-.contact-form h3{
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 700;
-    font-family: "Alegreya SC", serif;
-    font-style: italic;
-    margin-top: 20px;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.contact-form h5{
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 400;
-    font-family: "Alegreya SC", serif;
-    font-style: italic;
-    margin-top: 20px;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.contact-form p{
-    text-align: center;
-    text-align: justify;
-    font-size: 1.5rem;
-    font-weight: 500;
-    font-family: "Alegreya SC", serif;
-    font-style: italic;
-    margin: 10px;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.form-card input{
-    width: 100%;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
-    border: none;
-    font-size: 1rem;
-    font-weight: 300;
-    font-family: "poppins";
-}
-
-.form-card input:focus{
-    outline: none;
-    border: 2px solid #607001;
-    transition: all 0.3s ease;
-}
-
-.form-card textarea{
-    width: 100%;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
-    border: none;
-    font-size: 1rem;
-    font-weight: 300;
-    font-family: "poppins";
-}
-
-.form-card textarea:focus{
-    outline: none;
-    border: 2px solid #607001;
-    transition: all 0.3s ease;
-}
-
-.form-card button{
-    padding: 10px;
-    margin: 10px;
-    background-color: #607001;
-    font-family: "Alegreya SC", serif;
-    border: none;
-}
-
-.form-card{
-    display: flex;
-    height: 100vh;
-    text-align: left;
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px 0 rgba(104, 7, 104, 0.37);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur( 4px );
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    width: 80%;
-    margin: 20px;
-    padding: 20px;
-    transition-duration: .3s;
-}
-
-.form-card button:hover{
-    background-color: #fff;
-    color: #607001;
-    border-radius: 5px;
-    transition: all 0.3s ease;
 }
 
 .footer-content{
-    background-color: #42454e;
+    border-top: 2px solid #ffffff60;
+    background-color: #030a24;
     float: left;
     width: 100%;
     padding: 10vh;
@@ -671,33 +531,217 @@
     flex-wrap: wrap;
 }
 
-.footer-content h1{
+
+
+.footer-content p{
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.footer-left{
+    width: 50%;
+    float: left;
+    padding: 20px;
+}
+
+.footer-logo{
+    width: 100%;
+    float: left;
     text-align: center;
-    font-size: 3rem;
+    
+}
+.footer-logo img{
+    width: 200px;
+    margin: 20px;
+    float: left;
+}
+
+.socials img{
+    width: 30px;
+    color: white;
+    margin: 15px;
+    float: left;
+}
+
+.footer-bottom{
+    width: 100%;
+}
+
+.footer-right h3{
+    text-align: left;
+    font-size: 1.5rem;
     font-weight: 700;
-    font-family: "Alegreya SC", serif;
+    border-bottom: 2px solid #ffffff60;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.footer-right p{
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 20px;
+    line-height: 4.5vh;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.footer-right{
+    width: 50%;
+    float: left;
+    padding: 20px;
+}
+
+.footer-bottom{
+    border-top: 2px solid #ffffff60;
+    width: 100%;
+    float: left;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.footer-bottom p{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.footer-bottom a{
+    text-decoration: underline;
+    color: #fff;
+    
+    font-weight: 500;
+    padding: 20px;
+    transition-duration: 0.5s;
+}
+
+.footer-bottom a:hover{
+    text-decoration: underline;
+    color: blue;
+    font-weight: 700;
+    transition-duration: 0.5s;
+    padding: 20px;
+}
+
+
+.terms-content{
+    background-color: #030a24;
+    width: 100%;
+    color: white;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.terms-content h1{
+
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.terms{
+    width: 100%;
+    text-align: left;
+    padding: 10vh;
+}
+
+.terms h1{
+
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.terms h2{
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 700;
     font-style: italic;
     margin-top: 20px;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.footer-content p{
+.terms h3{
+
     text-align: left;
     font-size: 1rem;
-    font-weight: 500;
-    font-family: "poppins";
+    font-weight: 700;
+    font-style: italic;
     margin-top: 20px;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.footer-content img{
-    width: 70px;
-    margin: 30px;
-    float: left;
+.terms li{
+
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+    margin-top: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.footer-bottom{
+.terms ul{
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+
+.terms-conditions-heading{
+    animation: scroll 1s ease-in-out;
+    animation-timeline: view();
+animation-range: entry 0 cover 40%;
     width: 100%;
+    float: left;
+    text-align: left;
+    display: flex;
+    height: 60vh;
+    padding: 10vh;
+    background-image: url(images/bluebg.png);
+    background-position: center;
+    background-size: contain;
+    background-blend-mode: overlay;
+    background-color: #030a24;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.terms-conditions-heading h1{
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 20px;
+    font-weight: 500;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.terms-conditions-heading p{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
