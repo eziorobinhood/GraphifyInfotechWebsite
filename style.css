@@ -233,7 +233,7 @@
     animation: scroll 1s ease-in-out;
     animation-timeline: view();
     animation-range: entry 0 cover 50%;
-    height: 30vh;
+    height: 40vh;
     text-align: justify;
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba(104, 7, 104, 0.37);
