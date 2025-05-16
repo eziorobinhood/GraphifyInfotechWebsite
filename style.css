@@ -140,7 +140,7 @@
     padding: 20vh;
     background-color: #030a24;
     background-attachment: fixed;
-    height: 120vh;
+    height: 140vh;
     background-size: cover;
     background-position: center;
     float: left;
@@ -233,7 +233,6 @@
     animation: scroll 1s ease-in-out;
     animation-timeline: view();
     animation-range: entry 0 cover 50%;
-    height: 40vh;
     text-align: justify;
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba(104, 7, 104, 0.37);
@@ -303,7 +302,7 @@
     background-color: #030a24;
     background-attachment: fixed;
     display: flex;
-    height: 150vh;
+    height: 200vh;
     background-size: cover;
     background-position: center;
     float: left;
@@ -481,9 +480,8 @@
     animation: scroll 1s ease-in-out;
     animation-timeline: view();
     animation-range: entry 0 cover 50%;
-    height: 40vh;
     overflow: hidden;
-    text-align: left;
+    text-align: justify;
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba(104, 7, 104, 0.37);
     backdrop-filter: blur(8px);
@@ -510,7 +508,7 @@
 }
 
 .contact-card p{
-    text-align: center;
+    text-align: justify;
     font-size: 1rem;
     font-weight: 400;
     font-style: italic;
