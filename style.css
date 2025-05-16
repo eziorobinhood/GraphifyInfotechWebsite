@@ -743,3 +743,316 @@ animation-range: entry 0 cover 40%;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
+@keyframes stay {
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    
+
+    .home{
+        height: 80vh;
+        background-size: cover;
+        background-image: url(images/mobile/homebg.jpg);
+    }
+    .navibar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navibar ul{
+        display:none;
+    }
+    .home-content{
+        width: 100%;
+        padding: 20px;
+        top: 50%;
+        transform: translate(0%, -50%);
+        
+    }
+
+
+    .home-content h1{
+        font-size: 1.5rem;
+        font-style: italic;
+    }
+    .home-content h3{
+        font-size: 1rem;
+    }
+    .home-content p{
+        font-size: 1rem;
+    }
+    .aboutus-content{
+        width: 100%;    
+    }
+    .carousal-image{
+        display: none;
+
+
+    }
+
+    .aboutus{
+        width: 100%;
+        height: 120vh;
+        padding: 10px;
+    }
+
+    .aboutus-content{
+        width: 90%;
+        animation: scroll 1s ease-in-out;
+        animation-timeline: view();
+        animation-range: entry 0 cover 30%;
+        margin-top:30%;
+    }
+
+    .aboutus-content h1{
+        font-size: 1.7rem;
+        padding: 10px;
+    }
+
+    .aboutus-content h3{
+        font-size: 1rem;
+    }
+
+    .aboutus-content p{
+        font-size: 0.8rem;
+        line-height: 3vh;
+        font-weight: 400;
+    }
+
+    .services-head{
+        animation: scroll 1s ease-in-out;
+        animation-timeline: view();
+        animation-range: entry 0 cover 30%;
+
+    }
+
+    .about-card{
+        width: 100%;
+        animation: scroll 1s ease-in-out;
+        animation-timeline: view();
+        animation-range: entry 0 cover 30%;
+    }
+
+    .about-card img{
+        margin:18px;
+        animation: scroll 1s ease-in-out;
+        animation-timeline: view();
+        animation-range: entry 0 cover 30%;
+    }
+
+    .contactus-head{
+        width:100%;
+        padding: 25px;
+    }
+
+    .contactus h1{
+        font-size: 1.5rem;
+        padding: 5px;
+        animation: scroll 1s ease-in-out;
+        animation-timeline: view();
+        animation-range: entry 0 cover 30%;
+    }
+
+    .contactus{
+        height: 350vh;
+    }
+
+    .contactus h2{
+        width: 100%;
+        font-size: 1.2rem;
+        line-height: 4vh;
+        padding: 5px;
+        animation: scroll 1s ease-in-out;
+        animation-timeline: view();
+        animation-range: entry 0 cover 30%;
+    }
+
+    .contactus h3{
+        width: 100%;
+        font-size: 1rem;
+        line-height: 4vh;
+        padding: 5px;
+        animation: scroll 1s ease-in-out;
+        animation-timeline: view();
+        animation-range: entry 0 cover 30%;
+    }
+
+    .contact-card{
+        width: 100%;
+    }
+    
+    .getstarted{
+        width: 100%;
+        padding: 2vh;
+    }
+
+    .get-started-head{
+        width: 100%;
+        padding: 2vh;
+        background-image: url(images/contactus-bg.jpg);
+        background-blend-mode: overlay;
+        background-position: center;
+        background-size: cover;
+        background-color: #030a24;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .getstarted h1{
+        font-size: 1.5rem;
+        padding: 5px;
+        animation: scroll 1s ease-in-out;
+        animation-timeline: view();
+        animation-range: entry 0 cover 30%;
+    }
+
+    .getstarted h3{
+        font-size: 1rem;
+        padding: 5px;
+        animation: scroll 1s ease-in-out;
+        animation-timeline: view();
+        line-height: 4vh;
+        animation-range: entry 0 cover 30%;
+    }
+
+    .footer{
+        width: 100%;
+    }
+    .footer-logo{
+        width: 30%;
+        float: left;
+        text-align: center;
+    }
+
+    .footer-logo img{
+        width: 100px;
+        margin: 0px;
+        float: left;
+    }
+
+    .footer-content{
+        width: 100%;
+        padding: 0vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left{
+        width: 100%;
+        display: flex;
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left img{
+        margin: 10px;
+    }
+
+    .footer-right{
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-right h3{
+        text-align: left;
+        font-size: 1.5rem;
+        font-weight: 700;
+        border-bottom: 2px solid #ffffff60;
+        padding-bottom: 10px;
+        margin: 10px;
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .footer-right p{
+        text-align: left;
+        font-size: 1rem;
+        font-weight: 500;
+        margin: 10px;
+        line-height: 4.5vh;
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .footer-bottom{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .footer-bottom p{
+        margin-top: 0px;
+    }
+
+    .footer-bottom a{
+        padding:0px;
+    }
+
+    .terms-conditions-heading{
+        width: 100%;
+        padding: 10px;
+        background-image: url(images/contactus-bg.jpg);
+        background-blend-mode: overlay;
+        background-position: center;
+        background-size: cover;
+        background-color: #030a24;
+    }
+
+    .terms-conditions-heading h1{
+        font-size: 2rem;
+        padding: 5px;
+        animation: scroll 1s ease-in-out;
+        animation-timeline: view();
+        animation-range: entry 0 cover 30%;
+    }
+
+    .terms-conditions-heading p{
+        font-size: 1rem;
+        padding: 5px;
+        animation: scroll 1s ease-in-out;
+        animation-timeline: view();
+        animation-range: entry 0 cover 30%;
+    }
+
+    .terms{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .terms h1{
+        font-size: 1.5rem;
+        padding: 5px;
+
+    }
+
+    .terms h2{
+        font-size: 1.2rem;
+        padding: 5px;
+
+    }
+
+    .terms h3{
+        font-size: 1rem;
+        padding: 5px;
+
+    }
+
+    .terms li{
+        font-size: 1rem;
+        padding: 0px;
+    }
+}
